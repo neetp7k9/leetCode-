@@ -12,13 +12,20 @@ def search(nums, target)
   l=0
   r=nums.length-1
   if(nums.first >= nums.last)
+  puts "in loop"
+  puts r
+  puts l
+  puts (l+r)/2
     while (l+1) < r
-      if nums[(l+r)/2] >= nums[l]
+      if nums[(l+r)/2] > nums[l]
         l = (l+r)/2
       else
         r = (l+r)/2
       end
     end
+  puts "out loop"
+  puts r
+  puts l
     if(nums.last >= target)
         l=r
         r=nums.length-1
@@ -27,6 +34,8 @@ def search(nums, target)
         l=0
     end
   end
+  puts r
+  puts l
   while (l+1) < r
     if nums[(l+r)/2] > target
       r = (l+r)/2
@@ -40,4 +49,4 @@ def search(nums, target)
   return -1 
 end
 
-puts search [3,1], 1
+puts search [1,1,3,1], 3
