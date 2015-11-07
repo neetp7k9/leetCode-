@@ -1,5 +1,4 @@
 #!/usr/bin/ruby
-
 def three_sum nums
     solution = {}
     nums.sort!
