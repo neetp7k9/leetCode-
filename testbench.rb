@@ -2,6 +2,6 @@
 require "./list.rb"
 require ARGV[0]
 
-head = makeList [1,2,2,1]
+head = makeList [9,8,0,3,4,2,1]
 printList head
-puts is_palindrome(head)
+printList sort_list(head)
